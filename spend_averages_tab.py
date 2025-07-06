@@ -23,9 +23,9 @@ def run_spend_averages_tab(
     # --- Input summary ---
     st.markdown("---")
     st.markdown(
-        f"**Inputs:**  S₀ = ${initial_price:.2f}  |  "
-        f"Drift = {mc_drift:.1%}  |  "
-        f"Vol = {mc_vol:.1%}  |  "
+        f"**Inputs:**  S₀ = ${initial_price:.0f}  |  "
+        f"Drift = {mc_drift:.0%}  |  "
+        f"Vol = {mc_vol:.0%}  |  "
         f"Horizon = {mc_horiz} days  |  "
         f"Sims = {mc_sims:,}  |  "
         f"Total Shares = {total_shares:,}"

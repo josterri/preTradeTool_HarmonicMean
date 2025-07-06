@@ -16,7 +16,7 @@ def main():
     sims         = 10_000
     total_shares = 100.0
 
-    mu_list      = [i / 1.0 for i in range(-1, 1)]  
+    mu_list      = [i / 100.0 for i in range(-1, 1)]  
     sigma_list   = [i / 100.0 for i in range(0, 101)]   
     horizon_list = [i  for i in range(60, 300,5)]                  
 
