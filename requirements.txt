@@ -1,0 +1,9 @@
+fpdf
+matplotlib
+numpy
+pandas
+plotly
+pytest
+streamlit
+yfinance
+diskcache
