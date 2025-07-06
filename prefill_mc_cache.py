@@ -16,9 +16,9 @@ def main():
     sims         = 10_000
     total_shares = 100.0
 
-    mu_list      = [i / 100.0 for i in range(-10, 11)]   # -0.10 … +0.10
+    mu_list      = [i / 1.0 for i in range(-1, 1)]   # -0.10 … +0.10
     sigma_list   = [i / 100.0 for i in range(0, 101)]   #  0.00 …  1.00
-    horizon_list = list(range(1, 253))                  # 1 … 252 days
+    horizon_list = [i  for i in range(60, 300,5)]                  # 1 … 252 days
 
     combos = itertools.product(mu_list, sigma_list, horizon_list)
     total  = len(mu_list) * len(sigma_list) * len(horizon_list)
