@@ -8,13 +8,18 @@ st.title("📈 Share Buyback Tool")
 
 with st.sidebar:
     st.header("Monte Carlo Settings")
-    mc_horiz      = st.number_input("Horizon (days)",        1, 500, 125)
+    mc_horiz      = st.number_input("Horizon (days)",        50, 500, 125, step=5)
     mc_drift      = st.number_input("Drift (annual %)",      0, 100,   0, step=1)/100.0
     mc_vol        = st.number_input("Volatility (annual %)", 0, 100,  25, step=1)/100.0
-    mc_sims       = st.number_input("Simulations",          1000, 200000, 10000, step=1000)
+    mc_sims       = st.number_input("Simulations",          10000, 200000, 10000, step=10000)
     initial_price = st.number_input("Initial Price (S₀)",     10, 1000,  100, step=10)
     total_shares  = st.number_input("Total Shares",            1, 1000000, 100, step=100)
 
+    st.markdown("---")
+    st.markdown(
+            "[www.joergosterrieder.com](https://www.joergosterrieder.com)",
+            unsafe_allow_html=True
+        )
 tabs = st.tabs([
     "💲 Arithmetic vs Harmonic Mean"
 ])
@@ -23,3 +28,10 @@ with tabs[0]:
     run_spend_averages_tab(
         initial_price, mc_drift, mc_vol, mc_horiz, mc_sims, total_shares
     )
+st.markdown(
+    "<div style='text-align: center; margin-top: 2rem;'>"
+    "<a href='https://www.joergosterrieder.com' target='_blank'>"
+    "www.joergosterrieder.com</a>"
+    "</div>",
+    unsafe_allow_html=True
+)
